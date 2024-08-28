@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LECYTO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        $(function () {
+            /* up버튼 */
+            $('.up').click(function () {
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 700)
+            });
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 0) {
+                    $('.up').css({
+                        'display': 'block'
+                    })
+                } else {
+                    $('.up').css({
+                        'display': 'none'
+                    })
+                }
+            });
+
+            /* 스크롤 시 콘텐츠 나타내기 */
+            window.addEventListener('scroll', function() {
+                let visual01 = document.querySelector('.visual01');
+                let scrollBar = window.scrollY;
+
+                if($(window).width() >= 1024) {
+                    if(1300 < scrollY) {
+                        visual01.classList.add('scroll_on');
+                    } else {
+                        visual01.classList.remove('scroll_on');
+                    }
+                }
+                console.log(scrollBar)
+            })
+            /* section01 new slide */
+            var swiper = new Swiper(".first", {
+                rewind: true,
+                slidesPerView: 3,
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    1780: {
+                        slidesPerView: 4
+                    },
+                    1655: {
+                        slidesPerView: 3.5
+                    }
+                },
+            });
+
+            /* section01 new slide */
+            var swiper = new Swiper(".second", {
+                rewind: true,
+                slidesPerView: 3,
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: ".second-next",
+                    prevEl: ".second-prev",
+                },
+                breakpoints: {
+                    1780: {
+                        slidesPerView: 4
+                    },
+                    1655: {
+                        slidesPerView: 3.5
+                    }
+                },
+            });
+        }); //script end
+    </script>
+</head>
+
+<body>
+    <div class="up">
+        <img src="img/icon/up100.png" alt="위로가기">
+    </div><!-- .up end -->
+    <header class="header">
+        <div class="inner">
+            <h1>
+                <a href="#"><img src="img/new_logo.svg" alt="로고"></a>
+            </h1>
+            <nav class="pc_nav pc">
+                <ul class="gnb">
+                    <li>
+                        <a href="#" class="depth01">SHOP</a>
+                    </li>
+                    <li>
+                        <a href="#" class="depth01">COLLECTION</a>
+                    </li>
+                </ul><!-- .gnb end -->
+            </nav><!-- .pc_nav end -->
+            <div class="util">
+                <a href="#">
+                    Search
+                </a>
+                <a href="#">
+                    User
+                </a>
+                <a href="#">
+                    Cart
+                </a>
+                <a href="#">
+                    Menu
+                </a>
+            </div><!-- .util end -->
+        </div><!-- .inner end -->
+    </header><!-- .header end -->
+    <div class="main_visual">
+        <h2>LECYTO</h2>
+        <div class="inner">
+            <img src="img/new_main_7.jpg" alt="메인이미지01">
+            <img src="img/new_main_9.jpg" alt="메인이미지02">
+            <img src="img/02.jpg" alt="메인이미지03">
+        </div><!-- .inner end -->
+    </div><!-- .main_visual end -->
+
+    <section class="section01">
+        <div class="inner">
+            <h3>NEW ARRIVAL</h3>
+            <p>For Men</p>
+            <div class="swiper new first">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="wrap">
+                            <img src="img/new/new_item01.jpg" alt="신상">
+                            <div class="text">
+                                <p>See-Through Tattoo T-shirt _[Beige]</p>
+                                <strong>KRW 112,000</strong>
+                                <button>장바구니 담기</button>
+                            </div><!-- .text end -->
+                        </div><!-- .wrap end -->
+                    </div> <!-- .slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="wrap">
+                            <img src="img/new/new_item02.jpg" alt="신상">
+                            <div class="text">
+                                <p>Henley Neck Waffle Sleeveless_[Charcoal]</p>
+                                <strong>KRW 64,000</strong>
+                                <button>장바구니 담기</button>
+                            </div><!-- .text end -->
+                        </div><!-- .wrap end -->
+                    </div> <!-- .slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="wrap">
+                            <img src="img/new/new_item03.jpg" alt="신상">
+                            <div class="text">
+                                <p>Essential Logo Sleeveless_[White]</p>
+                                <strong>KRW 39,000</strong>
+                                <button>장바구니 담기</button>
+                            </div><!-- .text end -->
+                        </div><!-- .wrap end -->
+                    </div> <!-- .slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="wrap">
+                            <img src="img/new/new_item04.jpg" alt="신상">
+                            <div class="text">
+                                <p>Essential Logo Sleeveless_[Gray]</p>
+                                <strong>KRW 39,000</strong>
+                                <button>장바구니 담기</button>
+                            </div><!-- .text end -->
+                        </div><!-- .wrap end -->
+                    </div> <!-- .slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="wrap">
+                            <img src="img/new/new_item05.jpg" alt="신상">
+                            <div class="text">
+                                <p>Oversized Logo Slit Sleeveless_[Black]</p>
+                                <strong>KRW 42,000</strong>
+                                <button>장바구니 담기</button>
+                            </div><!-- .text end -->
+                        </div><!-- .wrap end -->
+                    </div> <!-- .slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="wrap">
+                            <img src="img/new/new_item06.jpg" alt="신상">
+                            <div class="text">
+                                <p>Essential Logo Sleeveless / Drawers_[White]</p>
+                                <strong>KRW 66,000</strong>
+                                <button>장바구니 담기</button>
+                            </div><!-- .text end -->
+                        </div><!-- .wrap end -->
+                    </div> <!-- .slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="wrap">
+                            <img src="img/new/new_item07.jpg" alt="신상">
+                            <div class="text">
+                                <p>Essential Logo Sleeveless / Drawers_[Black]</p>
+                                <strong>KRW 66,000</strong>
+                                <button>장바구니 담기</button>
+                            </div><!-- .text end -->
+                        </div><!-- .wrap end -->
+                    </div> <!-- .slide end -->
+
+                </div><!-- .swiper_wrapper end -->
+            </div><!-- .new end -->
+        </div><!-- .inner end -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </section><!-- .section01 end -->
+
+    <section class="visual01">
+        <div class="inner">
+            <div class="item">
+                <img src="img/item01.jpg" alt="아이템">
+                <div class="text">
+                    <p>LECYTO SUMMER 2024 PT.01</p>
+                    <span>"THE MOMENT I SHINE"</span>
+                    <button>바로가기 <img src="img/icon/more_w.png" alt="바로가기"></button>
+                </div><!-- .text end -->
+            </div><!-- .item end -->
+            <div class="item center">
+                <div class="box">
+                    <img src="img/item02.jpg" alt="아이템">
+                    <div class="text">
+                        <p>2023 FALL COLLECTION</p>
+                        <button>바로가기 <img src="img/icon/more_w.png" alt="바로가기"></button>
+                    </div><!-- .text end -->
+                </div><!-- .box end -->
+                <div class="box">
+                    <img src="img/item03-2.jpg" alt="아이템">
+                    <div class="text">
+                        <p>LECYTO SPRING 2024</p>
+                        <span>"DREAMING IN A FANTASY"</span>
+                        <button>바로가기 <img src="img/icon/more_w.png" alt="바로가기"></button>
+                    </div><!-- .text end -->
+                </div><!-- .box end -->
+            </div><!-- .item end -->
+            <div class="item">
+                <img src="img/item04.png" alt="아이템">
+                <div class="text">
+                    <p>SUMMER NOMAD: Embrace the Freedom of Summer</p>
+                    <button>바로가기 <img src="img/icon/more_w.png" alt="바로가기"></button>
+                </div><!-- .text end -->
+            </div><!-- .item end -->
+        </div><!-- .inner end -->
+    </section><!-- .visual01 end -->
+
+    <section class="section02">
+        <div class="inner">
+            <h3>NEW ARRIVAL</h3>
+            <p>For Women</p>
+            <div class="swiper new second">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="wrap">
+                            <img src="img/new/new_itemW01.jpg" alt="신상">
+                            <div class="text">
+                                <p>Micro Mini String Frill Skirt_[White]</p>
+                                <strong>KRW 84,000</strong>
+                                <button>장바구니 담기</button>
+                            </div><!-- .text end -->
+                        </div><!-- .wrap end -->
+                    </div> <!-- .slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="wrap">
+                            <img src="img/new/new_itemW02.jpg" alt="신상">
+                            <div class="text">
+                                <p>Micro Mini String Frill Skirt_[Pink]</p>
+                                <strong>KRW 84,000</strong>
+                                <button>장바구니 담기</button>
+                            </div><!-- .text end -->
+                        </div><!-- .wrap end -->
+                    </div> <!-- .slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="wrap">
+                            <img src="img/new/new_itemW03.jpg" alt="신상">
+                            <div class="text">
+                                <p>Micro Mini String Frill Skirt_[Black]</p>
+                                <strong>KRW 84,000</strong>
+                                <button>장바구니 담기</button>
+                            </div><!-- .text end -->
+                        </div><!-- .wrap end -->
+                    </div> <!-- .slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="wrap">
+                            <img src="img/new/new_itemW04.jpg" alt="신상">
+                            <div class="text">
+                                <p>Flower Bikini_[White]</p>
+                                <strong>KRW 112,000</strong>
+                                <button>장바구니 담기</button>
+                            </div><!-- .text end -->
+                        </div><!-- .wrap end -->
+                    </div> <!-- .slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="wrap">
+                            <img src="img/new/new_itemW05.jpg" alt="신상">
+                            <div class="text">
+                                <p>Flower Bikini_[Black]</p>
+                                <strong>KRW 112,000</strong>
+                                <button>장바구니 담기</button>
+                            </div><!-- .text end -->
+                        </div><!-- .wrap end -->
+                    </div> <!-- .slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="wrap">
+                            <img src="img/new/new_itemW06.jpg" alt="신상">
+                            <div class="text">
+                                <p>2Way String Shirring Tube Top_[Pink]</p>
+                                <strong>KRW 62,000</strong>
+                                <button>장바구니 담기</button>
+                            </div><!-- .text end -->
+                        </div><!-- .wrap end -->
+                    </div> <!-- .slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="wrap">
+                            <img src="img/new/new_itemW07.jpg" alt="신상">
+                            <div class="text">
+                                <p>2Way String Shirring Tube Top_[White]</p>
+                                <strong>KRW 62,000</strong>
+                                <button>장바구니 담기</button>
+                            </div><!-- .text end -->
+                        </div><!-- .wrap end -->
+                    </div> <!-- .slide end -->
+
+                </div><!-- .swiper_wrapper end -->
+            </div><!-- .new end -->
+        </div><!-- .inner end -->
+        <div class="second-next"></div>
+        <div class="second-prev"></div>
+    </section><!-- .section02 end -->
+
+    <section class="section03">
+        <div class="inner">
+            <img src="img/3D.png" alt="로고">
+            <h3>LECYTO</h3>
+            <p>
+                <span>It is a compound word of LE (French male's definite article) +CYTO- (cell) and pursues a variety
+                    of new trend fashion based on primitive men.</span>
+                <span>It breaks away from the existing fashion framework and reinterprets it from an exploratory
+                    perspective to solve it freely but stably.</span>
+                <span>I suggest styling with silhouettes and details that exist at the intersection of irregular things,
+                    not limited to one concept.</span>
+            </p>
+        </div><!-- .inner end -->
+    </section><!-- .section03 end -->
+
+    <footer class="footer">
+        <div class="inner">
+            <div class="top">
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">Contact</a>
+                <a href="#">
+                    <img src="img/icon/instagram-logo.png" alt="sns">
+                </a>
+            </div><!-- .top end -->
+            <div class="btm">
+                <p><span>회사 : LECYTO Owner : Sungchun Kim</span><span> Mail order no : 2021-서울광진-0046</span>
+                    <span>사업자등록번호 : 257-13-01468</span>
+                </p>
+                <p><span>주소 : 3F, 316-44 Seongsu-dong 2-ga, Seongdong-gu, Seoul, Republic of Korea</span> <span>E-mail :
+                        info@lecyto.kr</span> <span>Copyright© LECYTO. All rights reserved.</span></p>
+            </div><!-- .btm end -->
+        </div><!-- .inner end -->
+    </footer><!-- .footer end -->
+</body>
+
+</html>
