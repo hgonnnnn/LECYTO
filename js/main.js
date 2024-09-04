@@ -1,5 +1,6 @@
 $(function () {
   alert("현재 페이지는 최소 1024px까지 지원합니다.\n추후 업데이트할 예정입니다.")
+  
   /* up버튼 */
   $('.up').click(function () {
       $('html,body').animate({

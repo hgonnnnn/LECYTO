@@ -60,7 +60,7 @@
     background-color: #fff;
     border-bottom: 1px solid #000;
     position: fixed;
-    z-index: 5;
+    z-index: 11;
 }
 .header .inner {
     font-family: 'semibold';
